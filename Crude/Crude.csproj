@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceAssemblyReference>true</ProduceAssemblyReference>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\AboutPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemDetailPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemsPage.xaml" />
+    <EmbeddedResource Remove="Views\NewItemPage.xaml" />
+    <EmbeddedResource Remove="Views\MenuPage.xaml" />
+    <EmbeddedResource Remove="Views\MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\AboutPage.xaml.cs" />
+    <Compile Remove="Views\ItemDetailPage.xaml.cs" />
+    <Compile Remove="Views\ItemsPage.xaml.cs" />
+    <Compile Remove="Views\NewItemPage.xaml.cs" />
+    <Compile Remove="Models\HomeMenuItem.cs" />
+    <Compile Remove="Views\MenuPage.xaml.cs" />
+    <Compile Remove="Views\MainPage.xaml.cs" />
+    <Compile Remove="ViewModels\ItemsViewModel.cs" />
+  </ItemGroup>
+</Project>
